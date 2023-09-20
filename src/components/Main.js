@@ -18,7 +18,7 @@ function Main({ onEditAvatar, onAddPlace, onEditProfile, onCardClick }) {
         .catch((err) => console.log(err));
     }
 
-    return getInitialCards();
+    getInitialCards();
   }, []);
 
   useEffect(() => {
