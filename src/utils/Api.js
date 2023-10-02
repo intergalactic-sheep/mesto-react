@@ -90,6 +90,14 @@ class Api {
     })
       .then(this._onResponse);
   }
+
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked) {
+      return this.setLike(id);
+    } else {
+      return this.deleteLike(id);
+    }
+  }
 }
 
 const api = new Api(configApi);
