@@ -5,7 +5,7 @@ export default function AddPlacePopup({
   isOpen,
   onClose,
   isLoadingForm,
-  onAddCard
+  onAddCard,
 }) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
@@ -13,7 +13,7 @@ export default function AddPlacePopup({
   useEffect(() => {
     setName("");
     setLink("");
-  }, []);
+  }, [isOpen]);
 
   function handleNameInputChange(evt) {
     setName(evt.target.value);
@@ -30,8 +30,8 @@ export default function AddPlacePopup({
       link: link,
     });
 
-    setName('');
-    setLink('');
+    setName("");
+    setLink("");
   }
 
   return (
@@ -57,7 +57,7 @@ export default function AddPlacePopup({
             className="popup__input popup__input_type_link"
             placeholder="Ссылка на картинку"
             required
-            type='url'
+            type="url"
             value={link}
             onChange={handleLinkInputChange}
           />
