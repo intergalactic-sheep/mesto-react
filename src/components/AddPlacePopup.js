@@ -29,9 +29,6 @@ export default function AddPlacePopup({
       name: name,
       link: link,
     });
-
-    setName("");
-    setLink("");
   }
 
   return (
@@ -42,8 +39,7 @@ export default function AddPlacePopup({
       onClose={onClose}
       buttonTitle={isLoadingForm ? "Создание..." : "Создать"}
       onSubmit={handleSubmit}
-      children={
-        <>
+      >
           <input
             className="popup__input popup__input_type_place"
             placeholder="Название"
@@ -61,8 +57,6 @@ export default function AddPlacePopup({
             value={link}
             onChange={handleLinkInputChange}
           />
-        </>
-      }
-    />
+    </PopupWithForm>
   );
 }

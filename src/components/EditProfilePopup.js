@@ -50,7 +50,7 @@ export default function EditPopupProfile({
             required
             minLength={2}
             maxLength={40}
-            value={name}
+            value={name || ''}
             onChange={handleNameInputChange}
           />
           <input
@@ -60,7 +60,7 @@ export default function EditPopupProfile({
             required
             minLength={2}
             maxLength={200}
-            value={description}
+            value={description || ''}
             onChange={handleDescriptionInputChange}
           />
         </>
